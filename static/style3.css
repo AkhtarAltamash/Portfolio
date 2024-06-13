@@ -1,0 +1,150 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.chat-icon {
+    position: fixed;
+    bottom: 110px;
+    right: 40px;
+    width: 60px;
+    height: 60px;
+    background-color: #333;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    z-index: 9999;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.chat-icon.open {
+    background-color: #444;
+}
+
+.chat-icon:hover {
+    transform: scale(1.1);
+}
+
+.chat-icon.blink {
+    animation: blink 0.5s ease infinite;
+}
+
+.chat-icon.pop {
+    animation: pop 0.3s ease;
+}
+
+.chat-interface {
+    position: fixed;
+    bottom: 180px;
+    right: 20px;
+    width: 400px;
+    height: 400px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 9998;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+.chat-header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    font-weight: bold;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.chat-body {
+    padding: 10px;
+    height: 320px;
+    overflow-y: auto;
+    background-color: #f7f7f7;
+}
+
+.user-message,.bot-message {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.user-message {
+    color: #333;
+    text-align: right;
+}
+
+.bot-message {
+    color: #666;
+    text-align: left;
+}
+
+.chat-footer {
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: calc(100% - 20px);
+    background-color: #f7f7f7;
+}
+
+.chat-footer input[type="text"] {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+    background-color: #fff;
+}
+
+.chat-footer input[type="text"]:focus {
+    border-color: #333;
+}
+
+.chat-footer button {
+    width: 60px;
+    padding: 8px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+    outline: none;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+

@@ -1,0 +1,74 @@
+.carousel-inner img {
+  width: 100%;
+  height: 500px; /* Set a fixed height for consistency */
+  object-fit: cover; /* Ensures images cover the area without distortion */
+}
+
+
+/* Custom font styles */
+.carousel-caption h5,
+.carousel-caption p {
+  font-family: Arial, sans-serif; /* Specify your preferred font family */
+  font-weight: bold; /* Make the text bold */
+  font-size: 18px; /* Adjust the font size as needed */
+}
+
+
+/* Custom font styles */
+.carousel-caption h5,
+.carousel-caption p {
+  font-family: Arial, sans-serif; /* Specify your preferred font family */
+  font-weight: bold; /* Make the text bold */
+  font-size: 18px; /* Adjust the font size as needed */
+}
+
+/* Custom color for the third carousel item */
+.carousel-item:nth-child(3) .carousel-caption h5,
+.carousel-item:nth-child(3) .carousel-caption p {
+  color: whitesmoke; /* Bright red color */
+}
+
+
+
+.divider {
+  width: 100%;
+  height: 2px;
+  background-color: #f0f0f0; /* Light color for the divider */
+  margin: 20px 0; /* Adjust the margin as needed */
+  position: relative;
+}
+
+/* Decorative design at the starting of the divider */
+.divider::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background-color: #333; /* Color for the decorative design */
+  transform: translateY(-50%);
+}
+
+/* Decorative design at the ending of the divider */
+.divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 50px;
+  height: 2px;
+  background-color: #333; /* Color for the decorative design */
+  transform: translateY(-50%);
+}
+
+/* Heading style */
+.heading {
+  font-family: "Georgia", serif; /* Different font family */
+  font-size: 28px; /* Adjust the font size as needed */
+  font-weight: bold;
+  color: #333; /* Change the color as per your preference */
+  text-align: center;
+}
+
+
